@@ -1,5 +1,6 @@
 package com.benchzero.backend.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -26,6 +27,8 @@ public class Consultant {
     private Double dailyRate;
     private String currency; // "EUR" or "TND"
     private String riskLevel; // "CRITICAL", "MEDIUM", "STABLE"
+    
+    @Column(length = 1000)
     private String avatarUrl;
 
     // Skill proficiency levels (1-5, or 0 for gap)
